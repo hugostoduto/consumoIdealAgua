@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cantarell:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <h1>Quantidade Ideal</h1><i class="fas fa-tint" id="gota2" style="margin-left:20px; font-size:50px; color: white;"></i>
+            </div>
+            <div class="redes"><i class="fab fa-instagram"></i><i class="fab fa-linkedin-in"></i></div>
+        </nav>
+        <div class="hero">
+            <div class="texto">
+                <h1> Quer calcular seu consumo de água diário? </h1>
+                <p>Para saber a quantidade de água exata que você precisa tomar por dia, a primeira coisa a se fazer é analisar o seu peso. O cálculo a ser feito é de 35 ml de água multiplicado pelo peso corporal de cada um. </p>
+                <a href="#calculadora" id="aviso">
+                    <h1>
+                        Calculadora Abaixo
+                    </h1> <i class="fas fa-arrow-down" style="font-size: 40px;"></i>
+                </a>
+            </div>
+            <img src="/Assets/Personagem.png" alt="">
+
+        </div>
+        <div id="calculadora" class="container-calculadora">
+            <div class="texto-calculadora">
+                <div class="loader">
+                    <div class="circulo"></div>
+                    <i class="fas fa-tint" id="gota" style="font-size:70px; color: #ffffff;"></i>
+                </div>
+                <h1>Calculadora</h1>
+
+                <p>Calcule aqui seu consumo diário d'água ideal.</p>
+            </div>
+            <div class="calculadora">
+
+                <div class="peso">
+                    <i class="fas fa-weight-hanging" style="font-size:50px; color: #ffffff;"></i>
+                    <input id="peso" placeholder="00" type="number">
+
+                </div>
+                <div class="agua">
+                    <i class="fas fa-tint" style="font-size:50px; color: #ffffff;"></i>
+                    <input id="agua" placeholder="0.00 Litros" disabled>
+
+                </div>
+                <div class="compartilhar">
+                    <i class="fas fa-share-alt" style="font-size:50px; color: #F2F2F2;"></i>
+                    <h1>COMPARTILHAR</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $("#peso").keyup((calcular) => {
+        const peso = $("#peso").val()
+        const qdeAgua = 0.035
+        const beber = peso * qdeAgua
+        $("#agua").val(`${beber.toFixed(2)} Litros`)
+    })
+</script>
+
+</html>

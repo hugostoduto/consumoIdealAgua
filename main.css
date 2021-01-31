@@ -1,0 +1,287 @@
+html {
+    background: url("/Assets/Background.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+}
+
+body {
+    font-family: "Cantarell", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    align-content: center;
+    align-items: center;
+    width: 70%;
+    height: auto;
+    grid-template-areas: "nav" "hero" "calculadora";
+    grid-gap: 50px;
+    padding: 50px 50px 50px 50px;
+}
+
+nav {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    font-weight: 700;
+    font-size: 2.2rem;
+    box-shadow: 0px 5px 50px rgb(0, 0, 0, 0.3);
+    border-radius: 20px;
+    grid-area: nav;
+    background-color: #0442bf98;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    width: 80%;
+}
+
+.redes {
+    display: flex;
+    font-size: 50px;
+    width: 10%;
+    justify-content: space-around;
+}
+
+.hero {
+    height: 600px;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+    background-color: #0442bf98;
+    box-shadow: 0px 5px 50px rgb(0, 0, 0, 0.3);
+    border-radius: 20px;
+    grid-area: hero;
+}
+
+.hero img {
+    width: 40%;
+    transform: translateY(30px);
+    animation: y 5s ease-in-out infinite
+}
+
+.hero h1 {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 2.5rem;
+    width: 80%;
+}
+
+.hero p {
+    text-align: left;
+    font-size: 1.9rem;
+    color: #ffffff;
+    width: 80%;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    width: 50%;
+    margin-left: 20px
+}
+
+.container-calculadora {
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #0442bf98;
+    box-shadow: 0px 5px 50px rgb(0, 0, 0, 0.3);
+    grid-area: calculadora;
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+}
+
+.texto-calculadora {
+    font-size: 2rem;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 550px;
+    width: 500px;
+    border-radius: 30px;
+    margin-left: 50px;
+}
+
+.texto-calculadora p {
+    width: 80%;
+    font-size: 1.9rem;
+}
+
+.calculadora {
+    font-size: 1.5rem;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 550px;
+    width: 500px;
+    border-radius: 30px;
+    margin-left: 50px;
+}
+
+input {
+    text-align: center;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: white;
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin-left: 20px;
+}
+
+input::placeholder {
+    color: white;
+}
+
+.peso input {
+    font-size: 3rem;
+    width: 50%;
+}
+
+.peso {
+    display: flex;
+    width: 50%;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: #1E6FD9;
+    box-shadow: 0px 5px 20px #0439D9;
+}
+
+.agua input {
+    font-size: 3rem;
+    width: 70%;
+}
+
+.agua {
+    display: flex;
+    width: 80%;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    background-color: #1E6FD9;
+    box-shadow: 0px 5px 20px #0439D9;
+}
+
+.compartilhar {
+    font-weight: 700;
+    font-size: 1rem;
+    display: flex;
+    width: 90%;
+    height: 100px;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #0A31A6;
+    border-radius: 100px;
+    box-shadow: 0px 5px 20px rgb(3, 90, 166, 0.7);
+    cursor: pointer;
+}
+
+.compartilhar:hover {
+    background-color: #1E6FD9;
+}
+
+@keyframes y {
+    0% {
+        transform: translateY(30px);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: translateY(30px);
+    }
+}
+
+#aviso {
+    box-sizing: border-box;
+    text-decoration: none;
+    background-color: #1E6FD9;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    width: 530px;
+    height: 80px;
+    border-radius: 70px;
+    box-shadow: 0px 5px 20px rgb(0, 0, 0, 0.3);
+}
+
+.circulo {
+    height: 200px;
+    width: 200px;
+    box-sizing: border-box;
+    border-left: solid 5px #ffffff;
+    border-radius: 50%;
+    animation: rotate 5s linear infinite;
+}
+
+.loader {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gota {
+    position: absolute;
+    transform: translateY(30px);
+    animation: y 5s ease-in-out infinite;
+}
+
+@keyframes y {
+    0% {
+        transform: translateY(30px);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: translateY(30px);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
